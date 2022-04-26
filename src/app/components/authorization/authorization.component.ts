@@ -1,3 +1,4 @@
+import { FormGroup } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./authorization.component.scss']
 })
 export class AuthorizationComponent implements OnInit {
+  registerForm!: FormGroup;
 
   constructor() { }
 
   ngOnInit() {
+    this.registerForm = new FormGroup({
+      
+    })
   }
 
 }

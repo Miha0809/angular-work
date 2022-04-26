@@ -1,3 +1,4 @@
+import { SignUp } from '../../../shared/models/sign-up.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent implements OnInit {
+  signUp!: SignUp;
 
   constructor() { }
 
   ngOnInit() {
+    this.signUp = new SignUp();
   }
 
 }
