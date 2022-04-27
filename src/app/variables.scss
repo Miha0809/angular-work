@@ -1,0 +1,32 @@
+$font-color: #3a3737;
+$beige-color: rgba(255, 241, 112, 0.4);
+$green-color: rgba(164, 255, 112, 0.4);
+$hover-blue-color: rgba(112, 148, 255, 0.66);
+$box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+$border-radius: 20px;
+$max-width: 1336px;
+$max-height: 100px;
+$font-size: 25px;
+
+@mixin wrapper {
+  background: $beige-color;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+  max-width: $max-width;
+  max-height: $max-height;
+  margin: 20px auto;
+  color: $font-color;
+  color: $font-color;
+  font-size: $font-size;
+}
+
+a {
+  text-decoration: none;
+  color: $font-color;
+  transition: 0.3s;
+}
+
+.active-link:hover {
+  color: $hover-blue-color;
+  transition: 0.2s;
+}

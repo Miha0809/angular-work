@@ -6,6 +6,7 @@ import { AppRoutingModule, routesComponents } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 
 import { AppComponent } from './app.component';
 import { EmployerNavigationComponent } from './components/employer/employer-navigation/employer-navigation.component';
@@ -24,7 +25,8 @@ import { ApplicantNavigationComponent } from './components/applicant/applicant-n
     BrowserAnimationsModule,
     HttpClientModule,
     MatProgressSpinnerModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatButtonModule
   ],
   providers: [SignUp],
   bootstrap: [AppComponent]

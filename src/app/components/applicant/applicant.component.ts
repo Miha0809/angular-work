@@ -1,7 +1,6 @@
 import { CityServicesService } from './../../shared/services/city-services.service';
 import { City } from './../../shared/models/city.model';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-applicant',
