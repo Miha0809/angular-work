@@ -1,0 +1,17 @@
+@import "../../../variables.scss";
+
+.wrapper {
+  @include header(#fff, none);
+
+  .content {
+    .home {
+      position: absolute;
+      margin: 5px;
+      z-index: 2;
+
+      button {
+        cursor: pointer;
+      }
+    }
+  }
+}

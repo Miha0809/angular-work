@@ -1,6 +1,7 @@
 export class SignUp {
-    name!: string;
-    description!: string;
+    nameCompany?: string | null;
+    fullName!: string;
     email!: string;
     numberPhone!: string;
+    password!: string;
 }
