@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
 
-> Back-end https://github.com/Miha0809/Work-WebAPI/blob/main/
+> Back-end https://github.com/Miha0809/Work-WebAPI/
 
 ## Development server
 
