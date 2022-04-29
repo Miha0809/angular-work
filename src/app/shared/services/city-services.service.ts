@@ -1,4 +1,3 @@
-import { City } from './../models/city.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
@@ -12,9 +11,5 @@ export class CityServicesService {
 
   getCities() {
     return this.http.get("https://raw.githubusercontent.com/Adushar/UkraineCitiesAndVillages/main/CitiesAndVillages%20-%2014%20March.json");
-  }
-
-  setCity(city: City) {
-    return this.http.post(this.BASE_URL, city);
   }
 }

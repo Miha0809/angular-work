@@ -8,7 +8,7 @@ import { City } from './city.model';
 import { Salary } from './salary.model';
 
 export class Vacancy {
-    id?: number;
+    id!: number;
     name!: string;
     description!: string;
     categories!: Category[];

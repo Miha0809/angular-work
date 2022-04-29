@@ -1,4 +1,5 @@
-<form [formGroup]="formSignIn" (ngSubmit)="onSubmit()">
+<form [formGroup]="formSignIn"
+      (ngSubmit)="onSubmit()">
   <mat-form-field>
     <mat-label>Email</mat-label>
     <input
@@ -7,6 +8,7 @@
       formControlName="email"
       placeholder="pat@example.com"
       maxlength="256"
+      [(ngModel)]="signIn.email"
     />
     <mat-error>Email error!</mat-error>
   </mat-form-field>
@@ -20,6 +22,7 @@
       placeholder="Password"
       maxlength="256"
       minlength="6"
+      [(ngModel)]="signIn.password"
     />
     <mat-error>Password error!</mat-error>
   </mat-form-field>

@@ -33,7 +33,7 @@ import { ApplicantNavigationComponent } from './components/applicant/applicant-n
     MatFormFieldModule,
     MatInputModule,
     MatTabsModule,
-    MatIconModule
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

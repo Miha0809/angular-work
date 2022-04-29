@@ -1,5 +1,5 @@
 export class City {
-    id?: number;
+    id!: number;
     name!: string;
-    comment?: string | null;
+    comment!: string | null;
 }

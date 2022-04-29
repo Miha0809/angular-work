@@ -1,5 +1,3 @@
-import { CityServicesService } from './../../shared/services/city-services.service';
-import { City } from './../../shared/models/city.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

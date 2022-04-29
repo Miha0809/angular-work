@@ -1,7 +1,9 @@
 export class SignUp {
-    nameCompany?: string | null;
+    nameCompany!: string;
+    countJobs!: number;
     fullName!: string;
-    email!: string;
     numberPhone!: string;
+    email!: string;
     password!: string;
+    description!: string;
 }
