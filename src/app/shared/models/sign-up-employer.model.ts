@@ -1,4 +1,4 @@
-export class SignUp {
+export class SignUpEmployer {
     nameCompany!: string;
     countJobs!: number;
     fullName!: string;

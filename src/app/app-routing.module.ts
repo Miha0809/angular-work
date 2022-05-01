@@ -7,6 +7,10 @@ import { ApplicantSignInComponent } from './components/applicant/applicant-authr
 import { ApplicantSignUpComponent } from './components/applicant/applicant-authrization/applicant-sign-up/applicant-sign-up.component';
 
 import { EmployerComponent } from './components/employer/employer.component';
+import { EmployerAuthrizationComponent } from './components/employer/employer-authrization/employer-authrization.component';
+import { EmployerSignInComponent } from './components/employer/employer-authrization/employer-sign-in/employer-sign-in.component';
+import { EmployerSignUpComponent } from './components/employer/employer-authrization/employer-sign-up/employer-sign-up.component';
+
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
@@ -15,6 +19,9 @@ const routes: Routes = [
   {path: "applicant-sign-in", component: ApplicantSignInComponent},
   {path: "applicant-sign-up", component: ApplicantSignUpComponent},
   {path: "employer", component: EmployerComponent},
+  {path: "employer-authorization", component: EmployerAuthrizationComponent},
+  {path: "employer-sign-in", component: EmployerSignInComponent},
+  {path: "employer-sign-up", component: EmployerSignUpComponent},
   {path: "**", component: PageNotFoundComponent}
 ];
 
@@ -29,5 +36,8 @@ export const routesComponents = [
   ApplicantSignInComponent,
   ApplicantSignUpComponent,
   EmployerComponent,
+  EmployerAuthrizationComponent,
+  EmployerSignInComponent,
+  EmployerSignUpComponent,
   PageNotFoundComponent
 ];

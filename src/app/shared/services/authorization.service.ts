@@ -1,4 +1,4 @@
-import { SignUp } from '../models/sign-up.model';
+import { SignUp } from '../models/sign-up-employer.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
