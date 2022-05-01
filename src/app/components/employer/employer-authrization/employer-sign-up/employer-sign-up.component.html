@@ -1,0 +1,97 @@
+<form [formGroup]="signUpForm"
+  (submit)="onSubmit()">
+  <mat-form-field>
+    <mat-label>Name Company</mat-label>
+    <input
+      type="text"
+      matInput
+      formControlName="nameCompany"
+      placeholder="Ex. Tesla"
+      maxlength="32"
+      [(ngModel)]="signUp.nameCompany"
+    />
+    <mat-error>Name company error!</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Count jobs</mat-label>
+    <input
+      type="number"
+      matInput
+      formControlName="countJobs"
+      placeholder="Ex. 125"
+      [(ngModel)]="signUp.countJobs"
+    />
+    <mat-error>Count jobs error!</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Full Name Employer</mat-label>
+    <input
+      type="text"
+      matInput
+      formControlName="fullName"
+      placeholder="Name company"
+      maxlength="64"
+      [(ngModel)]="signUp.fullName"
+    />
+    <mat-error>Full name employer error!</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Number phone</mat-label>
+    <input
+      type="text"
+      matInput
+      formControlName="numberPhone"
+      placeholder="+380961234567"
+      maxlength="32"
+      [(ngModel)]="signUp.numberPhone"
+    />
+    <mat-error>Number phone error!</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="width-full">
+    <mat-label>Description about company</mat-label>
+    <textarea
+      matInput
+      formControlName="description"
+      [(ngModel)]="signUp.description"
+      ></textarea>
+    <mat-error>Description error!</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input
+      type="email"
+      matInput
+      formControlName="email"
+      placeholder="pat@example.com"
+      maxlength="128"
+      [(ngModel)]="signUp.email"
+    />
+    <mat-error>Email error!</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input
+      type="password"
+      matInput
+      formControlName="password"
+      placeholder="Password"
+      maxlength="32"
+      minlength="6"
+      [(ngModel)]="signUp.password"
+    />
+    <mat-error>Password error!</mat-error>
+  </mat-form-field>
+
+  <button
+    class="width-full"
+    type="submit"
+    mat-raised-button
+    color="primary"
+    [disabled]="signUpForm.invalid">Sign In</button>
+</form>

@@ -1,3 +1,19 @@
-<p>
-  applicant-navigation works!
-</p>
+<header class="wrapper">
+  <div class="content">
+    <div class="logo">
+      <a routerLink="/">Work</a>
+    </div>
+    <div class="navigation">
+      <div class="top">
+        <a class="active-link" routerLink="/employer">Employer</a>
+      </div>
+
+      <div class="bottom">
+        <!-- TODO: Router to vacancies -->
+        <a class="active-link" routerLink="/">Search vacancies</a>
+        <a class="active-link" routerLink="/employer">Employer</a>
+        <button routerLink="/applicant-authorization" mat-stroked-button>Log in</button>
+      </div>
+    </div>
+  </div>
+</header>

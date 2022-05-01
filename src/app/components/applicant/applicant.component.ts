@@ -10,6 +10,6 @@ export class ApplicantComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
-
 }

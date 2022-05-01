@@ -1,0 +1,11 @@
+@import "./variables.scss";
+
+.wrapper {
+  // background: #fff;
+  // box-shadow: $box-shadow-full;
+  border-radius: $border-radius;
+  max-width: $max-width;
+  margin: 20px auto;
+  color: $font-color;
+  font-size: $font-size;
+}

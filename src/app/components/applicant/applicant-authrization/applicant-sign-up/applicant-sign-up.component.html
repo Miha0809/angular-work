@@ -1,0 +1,49 @@
+<form [formGroup]="signUpForm"
+  (submit)="onSubmit()">
+  <mat-form-field>
+    <mat-label>Full Name Applicant</mat-label>
+    <input
+      type="text"
+      matInput
+      formControlName="fullName"
+      placeholder="Full name"
+      maxlength="64"
+      [(ngModel)]="signUp.fullName"
+    />
+    <mat-error>Full name applicant error!</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input
+      type="email"
+      matInput
+      formControlName="email"
+      placeholder="pat@example.com"
+      maxlength="128"
+      [(ngModel)]="signUp.email"
+    />
+    <mat-error>Email error!</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input
+      type="password"
+      matInput
+      formControlName="password"
+      placeholder="Password"
+      maxlength="32"
+      minlength="6"
+      [(ngModel)]="signUp.password"
+    />
+    <mat-error>Password error!</mat-error>
+  </mat-form-field>
+
+  <button
+    class="width-full"
+    type="submit"
+    mat-raised-button
+    color="primary"
+    [disabled]="signUpForm.invalid">Sign In</button>
+</form>

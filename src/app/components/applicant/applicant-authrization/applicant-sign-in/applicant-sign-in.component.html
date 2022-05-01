@@ -1,0 +1,35 @@
+<form [formGroup]="formSignIn"
+      (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input
+      type="email"
+      matInput
+      formControlName="email"
+      placeholder="pat@example.com"
+      maxlength="256"
+      [(ngModel)]="signIn.email"
+    />
+    <mat-error>Email error!</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input
+      type="password"
+      matInput
+      formControlName="password"
+      placeholder="Password"
+      maxlength="256"
+      minlength="6"
+      [(ngModel)]="signIn.password"
+    />
+    <mat-error>Password error!</mat-error>
+  </mat-form-field>
+
+  <button
+    type="submit"
+    mat-raised-button
+    color="primary"
+    [disabled]="formSignIn.invalid">Sign In</button>
+</form>

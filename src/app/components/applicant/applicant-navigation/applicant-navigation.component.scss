@@ -1,0 +1,57 @@
+@import "../../../variables.scss";
+
+$padding-border: 20px;
+
+.wrapper {
+  @include header(#fff, $box-shadow-lite);
+  padding-top: 20px;
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 3.2fr;
+
+    .logo {
+      line-height: $max-height;
+      text-align: center;
+
+      a {
+        font-size: 50px;
+      }
+    }
+
+    .navigation {
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      justify-content: right;
+
+
+      .top {
+        grid-row-start: 1;
+        grid-row-end: 1;
+        text-align: center;
+        font-size: 15px;
+        line-height: calc($max-height / 4);
+        text-align: right;
+        padding-right: $padding-border + 20px;
+
+      }
+
+      .bottom {
+        grid-row-start: 2;
+        grid-row-end: 4;
+        text-align: center;
+        line-height: calc($max-height / 3);
+        
+        a {
+          padding-right: 20px;
+        }
+        
+        button {
+          font-size: $font-size;
+          margin-right: $padding-border;
+        }
+      }
+    }
+  }
+}
+
