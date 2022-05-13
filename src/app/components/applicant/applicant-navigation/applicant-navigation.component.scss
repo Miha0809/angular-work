@@ -37,6 +37,7 @@ $padding-border: 20px;
       }
 
       .bottom {
+        display: flex;
         grid-row-start: 2;
         grid-row-end: 4;
         text-align: center;

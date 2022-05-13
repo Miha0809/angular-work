@@ -1,5 +1,7 @@
+import { Street } from "./street.model";
+
 export class City {
     id!: number;
     name!: string;
-    comment!: string | null;
+    street?: Street | null;
 }
