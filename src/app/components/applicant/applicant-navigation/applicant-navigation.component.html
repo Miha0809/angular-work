@@ -11,8 +11,14 @@
       <div class="bottom">
         <!-- TODO: Router to vacancies -->
         <a class="active-link" routerLink="/">Search vacancies</a>
-        <a class="active-link" routerLink="/employer">Employer</a>
-        <button routerLink="/applicant-authorization" mat-stroked-button>Log in</button>
+        
+        <div *ngIf="!isLoggedIn">
+          <a class="active-link" routerLink="/employer">Employer</a>
+          <button routerLink="/employer-authorization" mat-stroked-button>Log in</button>
+        </div>
+        <div *ngIf="isLoggedIn">
+          <button routerLink="" mat-stroked-button>Log out</button>
+        </div>
       </div>
     </div>
   </div>

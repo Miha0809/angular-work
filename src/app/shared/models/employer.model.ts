@@ -3,8 +3,8 @@ import { Vacancy } from "./vacancy.model";
 
 export class Employer implements IUser {
     id!: number;
-    nameCompany!: string;
     countJobs!: number;
+    nameCompany!: string;
     fullName!: string;
     numberPhone!: string;
     email!: string;

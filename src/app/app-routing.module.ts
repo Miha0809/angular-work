@@ -3,25 +3,27 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ApplicantComponent } from './components/applicant/applicant.component';
 import { ApplicantAuthrizationComponent } from './components/applicant/applicant-authrization/applicant-authrization.component';
-import { ApplicantSignInComponent } from './components/applicant/applicant-authrization/applicant-sign-in/applicant-sign-in.component';
-import { ApplicantSignUpComponent } from './components/applicant/applicant-authrization/applicant-sign-up/applicant-sign-up.component';
+import { ApplicantLoginComponent } from './components/applicant/applicant-authrization/applicant-login/applicant-login.component';
+import { ApplicantRegisterComponent } from './components/applicant/applicant-authrization/applicant-register/applicant-register.component';
+import { EmployerProfileComponent } from './components/employer/employer-profile/employer-profile.component';
 
 import { EmployerComponent } from './components/employer/employer.component';
 import { EmployerAuthrizationComponent } from './components/employer/employer-authrization/employer-authrization.component';
-import { EmployerSignInComponent } from './components/employer/employer-authrization/employer-sign-in/employer-sign-in.component';
-import { EmployerSignUpComponent } from './components/employer/employer-authrization/employer-sign-up/employer-sign-up.component';
+import { EmployerLoginComponent } from './components/employer/employer-authrization/employer-login/employer-login.component';
+import { EmployerRegisterComponent } from './components/employer/employer-authrization/employer-register/employer-register.component';
 
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {path: "", component: ApplicantComponent},
   {path: "applicant-authorization", component: ApplicantAuthrizationComponent},
-  {path: "applicant-sign-in", component: ApplicantSignInComponent},
-  {path: "applicant-sign-up", component: ApplicantSignUpComponent},
+  // {path: "applicant-login", component: ApplicantLoginComponent},
+  // {path: "applicant-register", component: ApplicantRegisterComponent},
   {path: "employer", component: EmployerComponent},
   {path: "employer-authorization", component: EmployerAuthrizationComponent},
-  {path: "employer-sign-in", component: EmployerSignInComponent},
-  {path: "employer-sign-up", component: EmployerSignUpComponent},
+  {path: "employer-profile", component: EmployerProfileComponent},
+  // {path: "employer-login", component: EmployerLoginComponent},
+  // {path: "employer-register", component: EmployerRegisterComponent},
   {path: "**", component: PageNotFoundComponent}
 ];
 
@@ -33,11 +35,12 @@ export class AppRoutingModule { }
 export const routesComponents = [
   ApplicantComponent,
   ApplicantAuthrizationComponent,
-  ApplicantSignInComponent,
-  ApplicantSignUpComponent,
+  ApplicantLoginComponent,
+  ApplicantRegisterComponent,
   EmployerComponent,
   EmployerAuthrizationComponent,
-  EmployerSignInComponent,
-  EmployerSignUpComponent,
+  EmployerProfileComponent,
+  EmployerLoginComponent,
+  EmployerRegisterComponent,
   PageNotFoundComponent
 ];

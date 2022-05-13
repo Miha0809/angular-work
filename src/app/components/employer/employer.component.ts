@@ -1,3 +1,4 @@
+import { AuthorizationEmployerService } from 'src/app/shared/services/authorizationEmployer.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployerComponent implements OnInit {
 
-  constructor() { }
+  public get isLoggedIn() {
+    return this.authorization.isAuthenticated();
+  }
+
+  constructor(private authorization: AuthorizationEmployerService) { }
 
   ngOnInit() {
   }
-
 }
