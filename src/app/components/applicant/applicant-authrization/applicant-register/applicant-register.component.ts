@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { ApplicantAuthorizeService } from './../../../../shared/services/applicant/applicant-authorize.service';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Applicant } from 'src/app/shared/models/applicant.model';
 
@@ -7,11 +9,12 @@ import { Applicant } from 'src/app/shared/models/applicant.model';
   templateUrl: './applicant-register.component.html',
   styleUrls: ['./applicant-register.component.scss']
 })
-export class ApplicantRegisterComponent implements OnInit {
+export class ApplicantRegisterComponent implements OnInit, OnDestroy {
   register!: Applicant;
   formRegister!: FormGroup;
-  
-  constructor() { }
+  subscription!: Subscription;
+
+  constructor(private api: ApplicantAuthorizeService) { }
 
   ngOnInit() {
     this.register = new Applicant();
@@ -23,6 +26,13 @@ export class ApplicantRegisterComponent implements OnInit {
   }
 
   onSubmit() {
+    this.subscription = this.api.register(this.register).subscribe(data => {
+      console.table(data)
+    },
+    err => console.table(err));
+  }
 
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 }

@@ -27,6 +27,19 @@
   </mat-form-field>
 
   <mat-form-field>
+    <mat-label>Number phone</mat-label>
+    <input
+      type="text"
+      matInput
+      formControlName="numberPhone"
+      placeholder="+380961234567"
+      maxlength="32"
+      [(ngModel)]="register.numberPhone"
+    />
+    <mat-error>Number phone error!</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
     <mat-label>Password</mat-label>
     <input
       type="password"
@@ -45,5 +58,5 @@
     type="submit"
     mat-raised-button
     color="primary"
-    [disabled]="formRegister.invalid">Sign In</button>
+    [disabled]="formRegister.invalid">Register</button>
 </form>

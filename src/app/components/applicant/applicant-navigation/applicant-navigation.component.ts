@@ -1,5 +1,5 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { AuthorizationEmployerService } from 'src/app/shared/services/authorizationEmployer.service';
 
 @Component({
   selector: 'app-applicant-navigation',
@@ -7,15 +7,13 @@ import { AuthorizationEmployerService } from 'src/app/shared/services/authorizat
   styleUrls: ['./applicant-navigation.component.scss']
 })
 export class ApplicantNavigationComponent implements OnInit {
-
-  public get isLoggedIn() : boolean {
-    return this.authorization.isAuthenticated();
-  }
-
   // TODO: Applicant services
-  constructor(private authorization: AuthorizationEmployerService) { }
+  constructor(private api: HttpClient) { }
 
   ngOnInit() {
   }
 
+  logout() {
+    
+  }
 }

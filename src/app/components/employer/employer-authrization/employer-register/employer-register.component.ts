@@ -1,7 +1,8 @@
-import { AuthorizationEmployerService } from 'src/app/shared/services/authorizationEmployer.service';
-import { Employer } from '../../../../shared/models/employer.model';
+import { EmployerAuthorizeService } from 'src/app/shared/services/employer/employer-authorize.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Subscription } from 'rxjs';
+import { Employer } from 'src/app/shared/models/employer.model';
 
 @Component({
   selector: 'app-employer-register',
@@ -11,8 +12,9 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class EmployerRegisterComponent implements OnInit {
   register!: Employer;
   formRegister!: FormGroup;
+  subscription!: Subscription;
   
-  constructor(private api: AuthorizationEmployerService) { }
+  constructor(private api: EmployerAuthorizeService) { }
 
   ngOnInit() {
     this.register = new Employer();
@@ -28,6 +30,10 @@ export class EmployerRegisterComponent implements OnInit {
   }
 
   onSubmit() {
-    this.api.register(this.register).subscribe();
+    this.subscription = this.api.register(this.register).subscribe();
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 }

@@ -1,20 +1,18 @@
-import { AuthorizationEmployerService } from 'src/app/shared/services/authorizationEmployer.service';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { EmployerAuthorizeService } from './../../../../shared/services/employer/employer-authorize.service';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Login } from 'src/app/shared/models/login.model';
-import { Subscriber, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-employer-login',
   templateUrl: './employer-login.component.html',
   styleUrls: ['./employer-login.component.scss']
 })
-export class EmployerLoginComponent implements OnInit, OnDestroy {
+export class EmployerLoginComponent implements OnInit {
   login!: Login;
   formLogin!: FormGroup;
-  subscriptions: Subscription[] = [];
 
-  constructor(private api: AuthorizationEmployerService) { }
+  constructor(private api: EmployerAuthorizeService) { }
 
   ngOnInit() {
     this.login = new Login();
@@ -25,12 +23,7 @@ export class EmployerLoginComponent implements OnInit, OnDestroy {
   }
 
   onSubmit(): void {
-    this.subscriptions.push(
-      this.api.login(this.login.email, this.login.password).subscribe()
-    );
-  }
-
-  ngOnDestroy(): void {
-    this.subscriptions.forEach(item => item.unsubscribe());
+    console.table(this.formLogin);
+    console.table(this.login);
   }
 }

@@ -5,19 +5,19 @@
     </div>
     <div class="navigation">
       <div class="top">
-        <a class="active-link" routerLink="/employer">Employer</a>
+        <a routerLink="/">Applicant</a>
       </div>
 
       <div class="bottom">
         <!-- TODO: Router to vacancies -->
-        <a class="active-link" routerLink="/">Search vacancies</a>
-        <a class="active-link" routerLink="/employer">Employer</a>
-        <div *ngIf="!isLoggedIn">
-          <button routerLink="/employer-authorization" mat-stroked-button>Log in</button>
+        <a routerLink="/">Search vacancies</a>
+        <a routerLink="/">Employer</a>
+        <div *ngIf="!isLoggined"> 
+          <button routerLink="/employer/authorization" mat-stroked-button>Log in</button>
         </div>
-        <div *ngIf="isLoggedIn">
-          <a routerLink="/employer-profile">Profile</a>
-          <button routerLink="" mat-stroked-button (click)="logout()">Logout</button>
+        <div *ngIf="isLoggined">
+          <a routerLink="/employer/profile">Profile</a>
+          <button mat-stroked-button (click)="logout()">Logout</button>
         </div>
       </div>
     </div>

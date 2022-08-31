@@ -109,5 +109,8 @@
       }
     }
   },
-  "defaultProject": "angular-work"
+  "defaultProject": "angular-work",
+  "cli": {
+    "analytics": false
+  }
 }

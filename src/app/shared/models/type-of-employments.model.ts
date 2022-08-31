@@ -1,4 +1,4 @@
-export class Category {
+export class TypeOfEmployments {
   id?: number;
   name!: string | null;
 }

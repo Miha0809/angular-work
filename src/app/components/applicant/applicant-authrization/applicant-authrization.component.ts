@@ -1,19 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-applicant-authrization',
   templateUrl: './applicant-authrization.component.html',
   styleUrls: ['./applicant-authrization.component.scss']
 })
-export class ApplicantAuthrizationComponent implements OnInit {
-  registerForm!: FormGroup;
-
+export class ApplicantAuthrizationComponent {
   constructor() { }
-
-  ngOnInit() {
-    this.registerForm = new FormGroup({
-      
-    })
-  }
 }

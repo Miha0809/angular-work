@@ -1,14 +1,15 @@
-import { IUser } from "./interfaces/iuser";
+import { Role } from "./role.model";
 import { Vacancy } from "./vacancy.model";
 
-export class Employer implements IUser {
-    id!: number;
-    countJobs!: number;
-    nameCompany!: string;
-    fullName!: string;
-    numberPhone!: string;
-    email!: string;
-    password!: string;
-    description!: string;
-    vacancies?: Vacancy[] | null;
+export class Employer {
+  id?: number;
+  countJobs!: number;
+  nameCompany!: string | null;
+  fullName!: string | null;
+  numberPhone!: string | null;
+  email!: string;
+  password!: string | null;
+  description!: string | null;
+  role!: Role | null;
+  vacancies!: Vacancy[] | null;
 }

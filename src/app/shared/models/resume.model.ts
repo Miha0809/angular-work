@@ -1,22 +1,21 @@
+import { VacancySuitable } from './vacancy-suitable.model';
+import { Applicant } from "./applicant.model";
 import { Category } from "./category.model";
 import { City } from "./city.model";
 import { Education } from "./Education.model";
-import { Employer } from "./employer.model";
 import { Experience } from "./experience.model";
 import { Salary } from "./salary.model";
 import { TypeOfEmployments } from "./type-of-employments.model";
-import { VacancySuitable } from "./vacancy-suitable.model";
 
-export class Vacancy {
+export class Resume {
   id?: number;
-  title!: string;
-  description!: string;
-  employer!: Employer | null;
+  applicant!: Applicant | null;
   category!: Category | null;
-  typeOfEmployments!: TypeOfEmployments | null;
-  experience!: Experience | null;
-  vacancySuitable!: VacancySuitable | null;
   city!: City | null;
-  salary!: Salary | null;
   education!: Education | null;
+  experience!: Experience | null;
+  salary!: Salary | null;
+  typeOfEmployments!: TypeOfEmployments | null;
+  vacancySuitable!: VacancySuitable | null;
+  dateTime!: string;
 }

@@ -1,4 +1,4 @@
-export class Street {
+export class Role {
   id?: number;
   name!: string;
 }
